@@ -68,3 +68,27 @@ tbody tr:nth-child(odd) td:last-child {
 	background-color: blue;
 	
 }
+
+#containerImg:hover::after {
+	
+	content: 'PROMOTION ! -50% !';
+    font-weight: bold;
+    position: relative;
+    left: 180px;
+    bottom: 90px;
+    background-color: red;
+    color:yellow;
+    font-size: 60px;
+	
+}
+
+button:hover::after {
+	
+	content : url('../img/paiement.png');
+	position: relative;
+	display: block;
+	height: 8px;
+	width: 10px;
+    left: 360px;
+	bottom: 360px;
+}
