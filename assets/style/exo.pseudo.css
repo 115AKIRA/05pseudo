@@ -1,0 +1,70 @@
+
+a:hover {
+	
+	background-color: orange;
+	text-decoration: none;
+	
+}
+
+a:visited {
+	
+	color: green;
+	
+}
+
+a:active {
+	
+	font-size: larger;
+	
+}
+
+td, th {
+	
+	border: 1px solid grey;
+	background-color: white;
+	
+}
+
+tr td {
+	
+	background-color: red;
+	
+}
+
+tr:nth-child(even) td {
+	
+	background-color: orange;
+	
+}
+
+tr:first-child th:last-child {
+	
+	border: none;
+	
+}
+
+tr:first-child th:nth-child(2) {
+	
+	color: blue;
+	
+}
+
+tbody td:first-child {
+	
+	color: white;
+	background-color: purple;
+	
+}
+
+tbody tr:nth-child(even) td:first-child  {
+	
+	background-color: gray;
+	
+}
+
+tbody tr:nth-child(odd) td:last-child {
+	
+	color: white;
+	background-color: blue;
+	
+}

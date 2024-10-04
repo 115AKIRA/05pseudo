@@ -1,0 +1,184 @@
+em {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.center {
+    width: 600px;
+    border: 2px dashed;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* ------------------------ */
+/* ------Pseudo classe----- */
+/* ------------------------ */
+#exemple1 {
+    height: 100px;
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 10px;
+    /*
+        Lorsque du contenu dépasse de votre container vous pouvez gérer le comportement du contenu
+        avec overflow: hidden | auto | scroll
+    */
+    overflow: auto;
+}
+
+#exemple1:hover {
+    background-color: rgba(360, 99, 71, 0.571);
+}
+
+.link:link {
+    color: black;
+    text-decoration: none;
+}
+
+.link:visited {
+    color:red;
+}
+
+.link:active {
+    color: green;
+    font-style: italic;
+    font-size: 80px;
+}
+
+/* ------------------------ */
+.test2 {
+    width: 300px;
+    margin: 30px auto;
+    border: 5px dotted black;
+    padding: 10px;
+}
+
+#pseudoClasse p:first-child {
+    text-decoration: underline;
+}
+
+#pseudoClasse p:first-of-type {
+    color: purple;
+    font-weight: bold;
+}
+
+#pseudoClasse p:last-child {
+    text-decoration: line-through;
+}
+
+#pseudoClasse p:last-of-type {
+    color: orange;
+    font-weight: bold;
+}
+
+#pseudoClasse p:nth-child(3) {
+    font-style: italic;
+}
+
+/* #pseudoClasse div   */
+#pseudoClasse section.center div:nth-child(even) {
+    background-color: lightblue;
+}
+
+/* ------------------------ */
+/* ------Pseudo Elt ------- */
+/* ------------------------ */
+#pseudoElt {
+    position: relative;
+}
+
+#pseudoElt section:first-of-type{
+    background-color: lightblue;
+}
+
+#pseudoElt section:first-of-type p:first-of-type {
+    background-color: yellow;
+    padding: 5px;
+}
+
+/*
+    Avant le contenu,
+    du premier élément de type p,
+    inclus dans
+    le premier élément de type section
+    inclus dans
+    l'élément d'identifiant pseudoElt
+*/
+#pseudoElt section:first-of-type p:first-of-type::before {
+    content: 'Texte ajouté avant';
+    color: purple;
+}
+
+/*
+    Après le contenu,
+    lors du survol,
+    du dernier élément de type p,
+    inclus dans
+    le premier élément de type section
+    inclus dans
+    l'élément d'identifiant pseudoElt
+*/
+#pseudoElt section:first-of-type p:last-of-type:hover::after {
+    content: 'PROUT';
+    font-weight: bold;
+    position: absolute;
+    left: 350px;
+    top: 120px;
+    background-color: red;
+    color:yellow;
+    font-size: 60px;
+}
+/* ---------------------------- */
+#pseudoElt section:nth-child(3) p::first-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold;
+    font-family: Harrington, Zapfino;
+}
+/* ---------------------------- */
+#pseudoElt section:nth-child(4) p::first-line {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold;
+    font-family: Harrington, Zapfino;
+}
+
+#pseudoElt section:nth-child(4) p::selection {
+    background-color: lightblue;
+    color: red;
+}
+
+/* ------------------------------------------- */
+#pseudoElt section:nth-child(5) {
+    height:400px;
+    overflow: auto;
+}
+
+/*
+    Sur chrome et sur edge pour styliser la barre de défilement 
+    on utilise un pseudo ELement sinon on modifie directement la propriété scrollbar
+*/
+
+#pseudoElt section:nth-child(5)::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+  
+#pseudoElt section:nth-child(5)::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+  
+#pseudoElt section:nth-child(5)::-webkit-scrollbar-thumb {
+    background-color: #AAA;
+    border-radius: 10px;
+    background-image: -webkit-linear-gradient(90deg,
+                                            rgba(0, 0, 0, .2) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(0, 0, 0, .2) 50%,
+                        rgba(0, 0, 0, .2) 75%,
+                        transparent 75%,
+                        transparent)
+}
